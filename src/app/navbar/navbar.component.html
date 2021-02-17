@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+  <a class="navbar-brand" routerLink="/">Sonatel Academy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"><i class="fal fa-clipboard-list"></i> Briefs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"><i class="fad fa-inbox-in"></i> Rendus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"><i class="fal fa-compass"></i> Explorer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"><i class="fas fa-comments"></i> Forum</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gears"></i> Parametre</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item btn-outline-danger" routerLink="/list-promo">Promo</a>
+            <button class="dropdown-item btn-outline-danger">Référentiels</button>
+            <button class="dropdown-item btn-outline-danger" routerLink="/add-grpc">Groupe de compétences</button>
+            <button class="dropdown-item btn-outline-danger">Compétences</button>
+            <button class="dropdown-item btn-outline-danger">Groupe de Tags</button>
+            <button class="dropdown-item btn-outline-danger">Profil de sortie</button>
+          </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Users</a>
+        <div class="dropdown-menu">
+          <button class="dropdown-item btn-outline-danger" routerLink="/list-user">Utilisateurs</button>
+          <button class="dropdown-item btn-outline-danger">Profils</button>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-history"></i> Historique des promos</a>
+      </li>
+    </ul>
+  </div>
+    <ul class="navbar-nav text-primary">
+      <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i><span> Profil</span></a>
+<!--        <a class="nav-item nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="assets/images/user.png" alt="user profil"></a>-->
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item"><i class="far fa-user-circle"></i><span> Profil</span></a>
+          <a href="#" class="dropdown-item"><i class="far fa-wrench"></i> Settings</a>
+          <button class="dropdown-item" (click)="Deconnecter()"><i class="fal fa-sign-out-alt"></i> Log Out</button>
+        </div>
+      </li>
+      <li class="nav-item text-primary">
+        <a href="#" class="nav-item nav-link"><i class="far fa-bell"></i><span> Notifications</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+
+
+

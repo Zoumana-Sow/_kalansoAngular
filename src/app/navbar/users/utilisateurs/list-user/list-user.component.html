@@ -1,0 +1,49 @@
+<div class="container text-center mt-5">
+  <span><h1>List User</h1></span>
+  <div class="row">
+
+    <button type="button" class="btn btn-outline-secondary mb-5" routerLink="/add-user"><i class="fas fa-user-plus"></i> Add-user</button>
+    <span class="fill-remaining-space"></span>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>avatar</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th scope="col" colspan="3">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users | slice: (page-1) * pageSize : page * pageSize" >
+        <td>
+          <img class="image" src="../../../../../assets/img.png" *ngIf="!user.avatar">
+          <img class="image" src="data:image/png;base64,{{ user.avatar }}" *ngIf="user.avatar">
+        </td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button class="btn btn-outline-secondary" routerLink="{{user.id}}/details-user">Detail</button>
+        </td>
+        <td>
+          <button class="btn btn-outline-secondary" routerLink="{{user.id}}/edit-user">Edit</button>
+        </td>
+<!--        <td>-->
+<!--          <button class="btn btn-outline-danger">Delete</button>-->
+<!--        </td>-->
+      </tr>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+                      [(page)]="page"
+                      [pageSize]="pageSize"
+                      [collectionSize]="users.length" ></ngb-pagination>
+    </div>
+
+  </div>
+
+</div>
+<router-outlet></router-outlet>
+

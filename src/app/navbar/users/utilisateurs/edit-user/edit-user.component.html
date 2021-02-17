@@ -1,0 +1,51 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+
+  <div class="app-content pt-3 p-md-3 p-lg-4 d-flex justify-content-center">
+    <div class="container-xl">
+      <h1>Edit User</h1>
+      <div class="row gy-4">
+        <div class="col-12 col-lg-6">
+          <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+            <div class="app-card-header p-3 border-bottom-0">
+              <div class="row align-items-center gx-3">
+                  <fieldset>
+                    <div class="form-group">
+                      <label>Firstname</label>
+                      <input type="text" class="form-control" [(ngModel)]="user.firstname" placeholder="Votre Prénom" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Lastname</label>
+                      <input type="text" class="form-control" [(ngModel)]="user.lastname" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                      <label>E-mail</label>
+                      <input type="email" class="form-control" [(ngModel)]="user.email" id="email" placeholder="votre email@exemple.com" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" class="form-control" placeholder="Mot de passe" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="selection">Profil</label>
+                      <select id="selection" class="form-control" [(ngModel)]="user.profil.libelle" required>
+                        <optgroup label="Liste de choix">
+                          <option value="Admin">Admin</option>
+                          <option value="Apprenant">Apprenant</option>
+                          <option value="CM">CM</option>
+                          <option value="Formateur">Formateur</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Avatar</label>
+                      <input type="file" class="form-control-file" (change)="uploadFile($event)" >
+                    </div>
+                    <button type="submit" (click)="edit()" class="btn btn-outline-primary">Valid</button>
+                  </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

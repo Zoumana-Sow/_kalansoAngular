@@ -1,0 +1,48 @@
+<!--&lt;!&ndash;   Mise en place balise Form + Action  &ndash;&gt;-->
+<!--<form class="box rounded">-->
+<!--  &lt;!&ndash;   Mise en place du SVG "user"     &ndash;&gt;-->
+<!--  <svg width="30" height="30" viewBox="0 0 24 24">-->
+<!--    <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>-->
+<!--  </svg>-->
+<!--  &lt;!&ndash;    Titre    &ndash;&gt;-->
+<!--  <h1>Connexion</h1>-->
+<!--  &lt;!&ndash;    Champs Utilisateur    &ndash;&gt;-->
+<!--  <input type="email" name="" placeholder="Votre e-mail">-->
+<!--  &lt;!&ndash;   Champs Mot de Passe     &ndash;&gt;-->
+<!--  <input type="password" name="" placeholder="Votre Mot De Passe">-->
+<!--  &lt;!&ndash;   Bouton de connexion     &ndash;&gt;-->
+<!--  <input type="submit" name="" value="Connexion">-->
+<!--</form>-->
+
+
+<div fxLayout="row" fxLayoutAlign="center center" class="login-main">
+  <form [formGroup]="loginForm" (ngSubmit)="seConnecter()">
+      <div class="header">
+        <h2>AUTHENTIFICATION</h2>
+      </div>
+    <mat-card-content>
+      <div class="form-group">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input type="email" class="form-control" formControlName="email" matInput placeholder="pat@example.com" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input type="password" class="form-control" formControlName="password" matInput placeholder="password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button (click)="seConnecter()" type="button" mat-raised-button class="btn btn-outline-primary btn-block theme-btn mx-auto">Login</button>
+    </mat-card-actions>
+  </form>
+
+</div>
+
+

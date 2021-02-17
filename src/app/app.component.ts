@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {AuthService} from './auth.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularSA-fil-rouge';
+  isconnect = false;
+
+  constructor(private auth: AuthService) {
+  }
+  estConnecter() {
+    return this.auth.estConnecte();
+  }
 }

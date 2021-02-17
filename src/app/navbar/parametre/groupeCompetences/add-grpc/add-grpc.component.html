@@ -1,0 +1,42 @@
+<!--<div class="container">-->
+<!--  <div class="row mt-5">-->
+<!--    <h6 class="display-4 text-center">Ajout Un Groupe De Competence</h6>-->
+<!--  </div>-->
+<!--  <hr>-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-5" style="border-right: 1px solid black;">-->
+<!--      <p class="pr-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, sint consequuntur repudiandae incidunt earum dignissimos ab corporis temporibus, nisi natus fuga. Laudantium deserunt pariatur ipsam dolor, fugiat, nam in iusto eos necessitatibus architecto officia voluptates. Voluptate alias consequuntur doloribus repellendus! Accusamus ducimus officiis nesciunt minima in ea quas earum quidem corporis fuga error dolorem culpa.</p>-->
+<!--      <hr>-->
+<!--      <p class="pr-5">-->
+<!--        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, id!-->
+<!--      </p>-->
+<!--      <p class="pr-5">-->
+<!--        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, modi hic! Quia, doloremque vitae, sint amet alias illo provident ea itaque quis accusantium quidem cupiditate nostrum maxime aliquid velit recusandae neque dignissimos ullam sequi aperiam possimus molestiae maiores hic. Modi, voluptatem nulla! Labore sint necessitatibus sed eveniet eos similique error quis dolor, dignissimos ducimus ipsum est iusto voluptatum unde veniam.-->
+<!--      </p>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <form action="" class="form-group" [formGroup]="bienForm" (ngSubmit)="onSubmit()">-->
+<!--        <div class="form-group">-->
+<!--          <label>Nom:</label>-->
+<!--          <input type="text"  class="form-control" id="libelle"-->
+<!--                 [formControlName]="'libelle'" placeholder="Entrer le libellé ">-->
+<!--          <small class="blockquote-footer">50 caractères max</small>-->
+<!--          <span *ngIf="!bienForm.get('libelle').valid && bienForm.get('libelle').touched" class="text-danger">-->
+<!--            Please entre Un title valider</span>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label >Déscription</label>-->
+<!--          <small class="blockquote-footer">500 caractères max</small>-->
+<!--          <textarea class="form-control"   name="description" [formControlName]="'description'"required rows="5" placeholder="Un text descriptif du bien"></textarea>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <select multiple class="form-control" [formControlName]="'competence'" required name="competence">-->
+<!--            <option *ngFor=" let p of competences " [value]="'/api/competences/'+p.id">{{p.libelle}}</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--        <hr>-->
+<!--        <button class="btn btn-primary mt-4" type="submit" >Soumettre</button>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
